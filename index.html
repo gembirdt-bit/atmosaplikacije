@@ -90,7 +90,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 document.getElementById('apps').innerHTML=APPS.map(a=>`<article class="app">
   <div class="top"><img src="ikone/${a.i}.png" alt="" width="60" height="60" loading="lazy"><div><h2>${esc(a.n)}</h2><div class="tag">${esc(a.t)}</div></div></div>
   <p>${esc(a.d)}</p><ul>${a.f.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
-  ${a.try?'<div class="try">🎁 Probna verzija 7 dana besplatno · Android i Windows · posle po licenci</div>':''}
+  ${a.try?'<div class="try">🎁 Probna verzija 30 dana besplatno · Android i Windows · posle po licenci</div>':''}
   <div class="btns"><a class="btn" href="${a.u}" target="_blank" rel="noopener">${esc(a.btn||'Otvori aplikaciju')}</a></div></article>`).join('');
 </script>
 </body>
