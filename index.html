@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Atmos aplikacije</title>
+<meta name="description" content="Besplatne Atmos aplikacije: Atmos Dom, Atmos Ishrana, Atmos Auto — servisna knjižica, Atmos Dashboard i Atmos Radionica.">
+<meta name="theme-color" content="#0c1512">
+<link rel="icon" href="ikone/atmos-dashboard.png">
+<meta property="og:title" content="Atmos aplikacije">
+<meta property="og:description" content="Besplatne aplikacije za domaćinstvo, ishranu, automobil i još mnogo toga.">
+<style>
+:root{--acc:#f0782f;--bg:#0c1512;--bg2:#111e1a;--card:#16251f;--card2:#1d3029;--line:rgba(255,255,255,.1);--txt:#eef7f3;--muted:#98b3a8}
+@media (prefers-color-scheme:light){:root{--bg:#f4f6f3;--bg2:#e9eee9;--card:#fff;--card2:#f1f4f0;--line:rgba(10,50,35,.12);--txt:#14231c;--muted:#5b6f66}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:radial-gradient(1200px 600px at 80% -10%,rgba(240,120,47,.16),transparent 60%),var(--bg);color:var(--txt);min-height:100vh;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding:calc(28px + env(safe-area-inset-top)) 18px calc(40px + env(safe-area-inset-bottom))}
+header{margin-bottom:26px}
+h1{font-size:clamp(1.9rem,5vw,2.6rem);margin:0 0 6px;letter-spacing:-.5px}
+h1 span{color:var(--acc)}
+.lead{color:var(--muted);margin:0;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.app{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;transition:transform .15s,border-color .15s}
+.app:hover{transform:translateY(-2px);border-color:var(--acc)}
+.top{display:flex;gap:14px;align-items:center}
+.top img{width:60px;height:60px;border-radius:14px;flex:none;background:var(--card2);object-fit:cover}
+.top h2{font-size:1.12rem;margin:0}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--acc);margin-top:2px}
+.app p{margin:0;color:var(--muted);font-size:.92rem;flex:1}
+.app ul{margin:0;padding-left:18px;color:var(--muted);font-size:.85rem}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{flex:1;text-align:center;text-decoration:none;padding:11px 14px;border-radius:12px;font-weight:700;font-size:.92rem;background:var(--acc);color:#fff;white-space:nowrap}
+.btn.g{background:var(--card2);color:var(--txt);border:1px solid var(--line);flex:none}
+.msg{margin:30px 0 0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.msg h3{margin:0 0 6px;font-size:1rem}
+.msg p{margin:0;color:var(--muted)}
+.how{margin-top:14px;font-size:.88rem;color:var(--muted)}
+footer{margin-top:34px;text-align:center;color:var(--muted);font-size:.8rem}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Atmos <span>aplikacije</span></h1>
+  <p class="lead">Jednostavne aplikacije na srpskom za svakodnevni život. Rade na telefonu, tabletu i računaru, i bez interneta. Podaci ostaju kod tebe, a po želji se čuvaju na tvom Google Drive-u.</p>
+</header>
+
+<main class="grid" id="apps"></main>
+
+<section class="msg">
+  <h3>📲 Kako da instaliraš aplikaciju</h3>
+  <p><b>Android (Chrome):</b> otvori aplikaciju → meni ⋮ → <i>Instaliraj aplikaciju</i> ili <i>Dodaj na početni ekran</i>.<br>
+  <b>iPhone / iPad (Safari):</b> otvori aplikaciju → dugme Deli → <i>Dodaj na početni ekran</i>.<br>
+  <b>Računar (Chrome / Edge):</b> klikni ikonicu za instalaciju u adresnoj traci.</p>
+  <p class="how">Aplikacije se same ažuriraju — ne moraš ništa ponovo da instaliraš.</p>
+</section>
+
+<footer>
+  Autor: Željko Ilić · Gemb-Bit, Beograd · Podrška: <a href="mailto:vasserviserbgd@gmail.com">vasserviserbgd@gmail.com</a>
+</footer>
+</div>
+<script>
+const BASE='https://gembirdt-bit.github.io/';
+const APPS=[
+  {n:'Atmos Dom',t:'Domaćinstvo',i:'atmos-dom',u:BASE+'atmosdom/',
+   d:'Troškovi domaćinstva na jednom mestu: računi, rokovi plaćanja, garancije, članarine i podsetnici.',
+   f:['Računi i rokovi plaćanja','Garancije, članarine, beleške','Podsetnici i izveštaji']},
+  {n:'Atmos Ishrana',t:'Zdravlje i ishrana',i:'atmos-ishrana',u:BASE+'atmos-ishrana/',
+   d:'Brojač kalorija i nutrijenata sa tablicom domaćih namirnica, skeniranjem barkoda i očitavanjem tabele sa pakovanja.',
+   f:['Dnevnik obroka i dnevni cilj','Skener barkoda i tabele sa pakovanja','Težina, voda, aktivnost, post']},
+  {n:'Atmos Auto — servisna knjižica',t:'Automobil',i:'atmos-auto',u:BASE+'atmos-auto-servisna-knjizica/',
+   d:'Servisna istorija vozila, potrošnja goriva i podsetnici za registraciju, osiguranje i redovne servise.',
+   f:['Servisi i troškovi','Gorivo i putovanja','Podsetnici po datumu i kilometraži']},
+  {n:'Atmos Dashboard',t:'Pametna tabla',i:'atmos-dashboard',u:BASE+'atmos/',
+   d:'Sat, vremenska prognoza, radio, kalendar, alarm i još mnogo toga na jednoj tabli — idealno za tablet ili TV.',
+   f:['Sat i vremenska prognoza','Radio i kalendar','Alarm']},
+  {n:'Atmos Radionica',t:'Za auto servise',i:'atmos-radionica',u:'https://github.com/gembirdt-bit/atmosradionica/releases/latest',btn:'Preuzmi (Android / Windows)',
+   d:'Program za auto servis: radni nalozi, vozila i mušterije, mehaničari, delovi, predračun i račun za štampu.',
+   f:['Radni nalozi, predračun i račun','Baza vozila i mušterija','Sinhronizacija između uređaja']}
+];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+document.getElementById('apps').innerHTML=APPS.map(a=>`<article class="app">
+  <div class="top"><img src="ikone/${a.i}.png" alt="" width="60" height="60" loading="lazy"><div><h2>${esc(a.n)}</h2><div class="tag">${esc(a.t)}</div></div></div>
+  <p>${esc(a.d)}</p><ul>${a.f.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+  <div class="btns"><a class="btn" href="${a.u}" target="_blank" rel="noopener">${esc(a.btn||'Otvori aplikaciju')}</a></div></article>`).join('');
+</script>
+</body>
+</html>
