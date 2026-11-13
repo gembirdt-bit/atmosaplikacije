@@ -12,7 +12,7 @@ Stranica sa svim Atmos aplikacijama: **https://gembirdt-bit.github.io/atmosaplik
 | Atmos Studio | za salone: termini, klijenti, usluge, paketi (Android / Windows, 30 dana besplatno) | https://gembirdt-bit.github.io/atmosstudio/ |
 | Atmos Radionica | za auto servise: radni nalozi, vozila, predračun i račun (Android / Windows, 30 dana besplatno) | https://gembirdt-bit.github.io/atmosradionica/ |
 
-Atmos Studio i Atmos Radionica rade kao Android i Windows aplikacije. Na njihovoj stranici su dugmad za preuzimanje (APK i Windows instalacija). Na ekranu za prijavu je taster **„Isprobaj besplatno“**: probna verzija traje 30 dana, sa najviše 3 klijenta (Studio) odnosno 3 vozila (Radionica), bez izvoza i sinhronizacije. Za stalni rad potrebna je licenca.
+Atmos Studio i Atmos Radionica rade kao Android i Windows aplikacije. Na njihovoj stranici su dugmad za preuzimanje (APK i Windows instalacija). Na ekranu za prijavu je taster **„Isprobaj besplatno“**: probna verzija traje 30 dana, sa najviše 10 klijenata (Studio) odnosno 10 vozila (Radionica), bez izvoza i sinhronizacije. Za stalni rad potrebna je licenca.
 
 ## Motivacione poruke (`poruke.json`)
 
