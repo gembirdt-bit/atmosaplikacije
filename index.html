@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Atmos aplikacije</title>
-<meta name="description" content="Besplatne Atmos aplikacije: Atmos Dom, Atmos Ishrana, Atmos Personalni trener, Atmos Auto — servisna knjižica, Atmos Dashboard i Atmos Radionica.">
+<meta name="description" content="Besplatne Atmos aplikacije: Atmos Dom, Atmos Ishrana, Atmos Personalni trener, Atmos Auto — servisna knjižica, Atmos Dashboard, Atmos Studio i Atmos Radionica.">
 <meta name="theme-color" content="#0c1512">
 <link rel="icon" href="ikone/atmos-dashboard.png">
 <meta property="og:title" content="Atmos aplikacije">
@@ -28,6 +28,7 @@ h1 span{color:var(--acc)}
 .tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--acc);margin-top:2px}
 .app p{margin:0;color:var(--muted);font-size:.92rem;flex:1}
 .app ul{margin:0;padding-left:18px;color:var(--muted);font-size:.85rem}
+.try{font-size:.8rem;color:var(--acc);background:var(--card2);border:1px dashed var(--line);border-radius:10px;padding:6px 10px;margin:0 0 10px}
 .btns{display:flex;gap:8px;flex-wrap:wrap}
 .btn{flex:1;text-align:center;text-decoration:none;padding:11px 14px;border-radius:12px;font-weight:700;font-size:.92rem;background:var(--acc);color:#fff;white-space:nowrap}
 .btn.g{background:var(--card2);color:var(--txt);border:1px solid var(--line);flex:none}
@@ -78,7 +79,10 @@ const APPS=[
   {n:'Atmos Dashboard',t:'Pametna tabla',i:'atmos-dashboard',u:BASE+'atmos/',
    d:'Sat, vremenska prognoza, radio, kalendar, alarm i još mnogo toga na jednoj tabli — idealno za tablet ili TV.',
    f:['Sat i vremenska prognoza','Radio i kalendar','Alarm']},
-  {n:'Atmos Radionica',t:'Za auto servise',i:'atmos-radionica',u:'https://github.com/gembirdt-bit/atmosradionica/releases/latest',btn:'Preuzmi (Android / Windows)',
+  {n:'Atmos Studio',t:'Za salone',i:'atmos-studio',u:'https://github.com/gembirdt-bit/atmosstudio/releases/latest',btn:'🎁 Besplatno isprobaj',try:1,
+   d:'Za frizere, kozmetičke salone, masere i nokte: kalendar termina po zaposlenima, klijenti, usluge, paketi termina i podsetnici klijentima.',
+   f:['Termini: zakazan, dolazi, kasni, završen','Paketi termina i praćenje naplate','Podsetnici Viber / WhatsApp / SMS']},
+  {n:'Atmos Radionica',t:'Za auto servise',i:'atmos-radionica',u:'https://github.com/gembirdt-bit/atmosradionica/releases/latest',btn:'🎁 Besplatno isprobaj',try:1,
    d:'Program za auto servis: radni nalozi, vozila i mušterije, mehaničari, delovi, predračun i račun za štampu.',
    f:['Radni nalozi, predračun i račun','Baza vozila i mušterija','Sinhronizacija između uređaja']}
 ];
@@ -86,6 +90,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 document.getElementById('apps').innerHTML=APPS.map(a=>`<article class="app">
   <div class="top"><img src="ikone/${a.i}.png" alt="" width="60" height="60" loading="lazy"><div><h2>${esc(a.n)}</h2><div class="tag">${esc(a.t)}</div></div></div>
   <p>${esc(a.d)}</p><ul>${a.f.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+  ${a.try?'<div class="try">🎁 Probna verzija 7 dana besplatno · Android i Windows · posle po licenci</div>':''}
   <div class="btns"><a class="btn" href="${a.u}" target="_blank" rel="noopener">${esc(a.btn||'Otvori aplikaciju')}</a></div></article>`).join('');
 </script>
 </body>
