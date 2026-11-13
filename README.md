@@ -6,6 +6,7 @@ Stranica sa svim besplatnim Atmos aplikacijama: **https://gembirdt-bit.github.io
 |---|---|---|
 | Atmos Dom | troškovi domaćinstva, računi, rokovi, garancije | https://gembirdt-bit.github.io/atmosdom/ |
 | Atmos Ishrana | kalorije i nutrijenti, barkod, tablica namirnica | https://gembirdt-bit.github.io/atmos-ishrana/ |
+| Atmos Personalni trener | za trenere: klijenti, termini, podsetnici, treninzi, napredak | https://gembirdt-bit.github.io/atmos-personalnitrener/ |
 | Atmos Auto — servisna knjižica | servisi, gorivo, podsetnici za vozilo | https://gembirdt-bit.github.io/atmos-auto-servisna-knjizica/ |
 | Atmos Dashboard | sat, prognoza, radio, kalendar, alarm | https://gembirdt-bit.github.io/atmos/ |
 | Atmos Radionica | program za auto servise (Android / Windows) | https://github.com/gembirdt-bit/atmosradionica/releases/latest |
