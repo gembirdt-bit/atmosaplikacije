@@ -1,6 +1,6 @@
 # Atmos aplikacije
 
-Stranica sa svim besplatnim Atmos aplikacijama: **https://gembirdt-bit.github.io/atmosaplikacije/**
+Stranica sa svim Atmos aplikacijama: **https://gembirdt-bit.github.io/atmosaplikacije/**
 
 | Aplikacija | Za šta je | Adresa |
 |---|---|---|
@@ -9,7 +9,10 @@ Stranica sa svim besplatnim Atmos aplikacijama: **https://gembirdt-bit.github.io
 | Atmos Personalni trener | za trenere: klijenti, termini, podsetnici, treninzi, napredak | https://gembirdt-bit.github.io/atmos-personalnitrener/ |
 | Atmos Auto — servisna knjižica | servisi, gorivo, podsetnici za vozilo | https://gembirdt-bit.github.io/atmos-auto-servisna-knjizica/ |
 | Atmos Dashboard | sat, prognoza, radio, kalendar, alarm | https://gembirdt-bit.github.io/atmos/ |
-| Atmos Radionica | program za auto servise (Android / Windows) | https://github.com/gembirdt-bit/atmosradionica/releases/latest |
+| Atmos Studio | za salone: termini, klijenti, usluge, paketi (Android / Windows, 7 dana besplatno) | https://gembirdt-bit.github.io/atmosstudio/ |
+| Atmos Radionica | za auto servise: radni nalozi, vozila, predračun i račun (Android / Windows, 7 dana besplatno) | https://gembirdt-bit.github.io/atmosradionica/ |
+
+Atmos Studio i Atmos Radionica rade kao Android i Windows aplikacije. Na njihovoj stranici su dugmad za preuzimanje (APK i Windows instalacija). Na ekranu za prijavu je taster **„Isprobaj besplatno“**: probna verzija traje 7 dana, sa najviše 3 klijenta (Studio) odnosno 3 vozila (Radionica), bez izvoza i sinhronizacije. Za stalni rad potrebna je licenca.
 
 ## Motivacione poruke (`poruke.json`)
 
