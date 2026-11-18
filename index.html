@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Atmos aplikacije</title>
-<meta name="description" content="Besplatne Atmos aplikacije: Atmos Dom, Atmos Ishrana, Atmos Personalni trener, Atmos Auto — servisna knjižica, Atmos Dashboard, Atmos Studio, Atmos Radionica i Atmos Sentinel.">
+<meta name="description" content="Besplatne Atmos aplikacije: Atmos Dom, Atmos Ishrana, Atmos Personalni trener, Atmos Auto — servisna knjižica, Atmos Dashboard, Atmos Studio, Atmos Radionica, Atmos Sentinel i Atmos Format.">
 <meta name="theme-color" content="#0c1512">
 <link rel="icon" href="ikone/atmos-dashboard.png">
 <meta property="og:title" content="Atmos aplikacije">
@@ -55,16 +55,16 @@ footer a{color:var(--muted)}
   <h3>📲 Kako da instaliraš aplikaciju</h3>
   <p><b>🌐 Web aplikacija (PWA)</b> — Dom, Ishrana, Personalni trener, Servisna knjižica, Dashboard:<br>
   Android (Chrome): meni ⋮ → <i>Instaliraj aplikaciju</i>. Računar (Chrome / Edge): ikonica za instalaciju u adresnoj traci.</p>
-  <p><b>🤖 Android APK</b> — Studio, Radionica, Sentinel:<br>
+  <p><b>🤖 Android APK</b> — Studio, Radionica, Sentinel, Format:<br>
   1) preuzmi <i>.apk</i> fajl i otvori ga (iz obaveštenja ili iz <i>Preuzimanja</i>)<br>
   2) ako telefon pita, uključi <i>Dozvoli iz ovog izvora</i> (instaliranje nepoznatih aplikacija) i vrati se nazad<br>
   3) pritisni <i>Instaliraj</i><br>
   4) ako Play zaštita prikaže upozorenje („Aplikacija je blokirana” / „Nebezbedna aplikacija”), pritisni <i>Više detalja</i> → <i>Ipak instaliraj</i>. Upozorenje se javlja samo zato što aplikacija nije sa Google Play prodavnice.</p>
-  <p><b>🪟 Windows</b> — Studio, Radionica:<br>
+  <p><b>🪟 Windows</b> — Studio, Radionica, Format:<br>
   preuzmi <i>.exe</i> fajl i pokreni ga. Ako se pojavi „Windows je zaštitio računar”, klikni <i>Više informacija</i> → <i>Ipak pokreni</i>.</p>
-  <p><b>🍎 iPhone / iPad</b> — sve osim Sentinela:<br>
+  <p><b>🍎 iPhone / iPad</b> — sve osim Sentinela i Format-a:<br>
   otvori aplikaciju u Safariju → dugme Deli → <i>Dodaj na početni ekran</i>.</p>
-  <p class="how">Web aplikacije, Studio i Radionica se same ažuriraju. Novu verziju Sentinela preuzmi istim dugmetom i instaliraj preko stare.</p>
+  <p class="how">Web aplikacije, Studio i Radionica se same ažuriraju. Novu verziju Sentinela i Format-a preuzmi istim dugmetom i instaliraj preko stare.</p>
 </section>
 
 <footer>
@@ -97,14 +97,18 @@ const APPS=[
    f:['Radni nalozi, predračun i račun','Baza vozila i mušterija','Sinhronizacija između uređaja']},
   {n:'Atmos Sentinel',t:'Provera diskova',i:'atmos-sentinel',u:'https://github.com/gembirdt-bit/gembirdt-bit-atmos-sentinel/releases/latest/download/AtmosSentinel.apk',btn:'📥 Preuzmi za Android',
    d:'Zdravlje HDD i SSD diskova na telefonu preko USB OTG kabla: SMART parametri, loši sektori, test površine i brzi format.',
-   f:['Zdravlje diska u % i temperatura','Realocirani i nestabilni sektori','Test čitanja, test upisa i brzi format']}
+   f:['Zdravlje diska u % i temperatura','Realocirani i nestabilni sektori','Test čitanja, test upisa i brzi format']},
+  {n:'Atmos Format',t:'Formatiranje diskova',i:'atmos-format',u:'https://github.com/gembirdt-bit/atmos-format/releases/latest/download/AtmosFormat.exe',btn:'🪟 Preuzmi za Windows',
+   u2:'https://github.com/gembirdt-bit/atmos-format/releases/latest/download/AtmosFormat.apk',btn2:'📥 Preuzmi za Android',
+   d:'Brisanje i formatiranje diskova uz zaštitu sistemskog diska: NTFS, exFAT ili FAT32, MBR ili GPT, brzi ili pun format sa proverom sektora.',
+   f:['Sistemski disk je uvek zaštićen','NTFS / exFAT / FAT32, MBR ili GPT','Pun format proverava sektore']}
 ];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 document.getElementById('apps').innerHTML=APPS.map(a=>`<article class="app">
   <div class="top"><img src="ikone/${a.i}.png" alt="" width="60" height="60" loading="lazy"><div><h2>${esc(a.n)}</h2><div class="tag">${esc(a.t)}</div></div></div>
   <p>${esc(a.d)}</p><ul>${a.f.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
   ${a.try?'<div class="try">🎁 Probna verzija 30 dana besplatno · Android i Windows · posle po licenci</div>':''}
-  <div class="btns"><a class="btn" href="${a.u}" target="_blank" rel="noopener">${esc(a.btn||'Otvori aplikaciju')}</a></div></article>`).join('');
+  <div class="btns"><a class="btn" href="${a.u}" target="_blank" rel="noopener">${esc(a.btn||'Otvori aplikaciju')}</a>${a.u2?`<a class="btn" href="${a.u2}" target="_blank" rel="noopener">${esc(a.btn2)}</a>`:''}</div></article>`).join('');
 </script>
 </body>
 </html>
