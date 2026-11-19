@@ -14,6 +14,7 @@ Stranica sa svim Atmos aplikacijama: **https://gembirdt-bit.github.io/atmosaplik
 | Atmos Magacin | šta se gde nalazi: kuća, garaža, vikendica, magacin, QR nalepnice | https://gembirdt-bit.github.io/atmos-magacin/ |
 | Atmos Sentinel | zdravlje HDD i SSD diskova preko USB OTG (Android) | https://github.com/gembirdt-bit/gembirdt-bit-atmos-sentinel/releases/latest |
 | Atmos Format | brisanje i formatiranje diskova (Windows / Android) | https://github.com/gembirdt-bit/atmos-format/releases/latest |
+| Atmos IP kamere | pretraga i pregled IP kamera na mreži, RTSP / MJPEG strimovi (Windows / Android) | https://github.com/gembirdt-bit/Atmos-ipkamere/releases/latest |
 
 Atmos Studio i Atmos Radionica rade kao Android i Windows aplikacije. Na njihovoj stranici su dugmad za preuzimanje (APK i Windows instalacija). Na ekranu za prijavu je taster **„Isprobaj besplatno“**: probna verzija traje 30 dana, sa najviše 10 klijenata (Studio) odnosno 10 vozila (Radionica), bez izvoza i sinhronizacije. Za stalni rad potrebna je licenca.
 

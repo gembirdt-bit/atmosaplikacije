@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Atmos aplikacije</title>
-<meta name="description" content="Besplatne Atmos aplikacije: Atmos Dom, Atmos Ishrana, Atmos Personalni trener, Atmos Auto — servisna knjižica, Atmos Dashboard, Atmos Studio, Atmos Radionica, Atmos Sentinel, Atmos Format i Atmos Magacin.">
+<meta name="description" content="Besplatne Atmos aplikacije: Atmos Dom, Atmos Ishrana, Atmos Personalni trener, Atmos Auto — servisna knjižica, Atmos Dashboard, Atmos Studio, Atmos Radionica, Atmos Sentinel, Atmos Format, Atmos IP kamere i Atmos Magacin.">
 <meta name="theme-color" content="#0c1512">
 <link rel="icon" href="ikone/atmos-dashboard.png">
 <meta property="og:title" content="Atmos aplikacije">
@@ -55,16 +55,16 @@ footer a{color:var(--muted)}
   <h3>📲 Kako da instaliraš aplikaciju</h3>
   <p><b>🌐 Web aplikacija (PWA)</b> — Dom, Ishrana, Personalni trener, Servisna knjižica, Dashboard, Magacin:<br>
   Android (Chrome): meni ⋮ → <i>Instaliraj aplikaciju</i>. Računar (Chrome / Edge): ikonica za instalaciju u adresnoj traci.</p>
-  <p><b>🤖 Android APK</b> — Studio, Radionica, Sentinel, Format:<br>
+  <p><b>🤖 Android APK</b> — Studio, Radionica, Sentinel, Format, IP kamere:<br>
   1) preuzmi <i>.apk</i> fajl i otvori ga (iz obaveštenja ili iz <i>Preuzimanja</i>)<br>
   2) ako telefon pita, uključi <i>Dozvoli iz ovog izvora</i> (instaliranje nepoznatih aplikacija) i vrati se nazad<br>
   3) pritisni <i>Instaliraj</i><br>
   4) ako Play zaštita prikaže upozorenje („Aplikacija je blokirana” / „Nebezbedna aplikacija”), pritisni <i>Više detalja</i> → <i>Ipak instaliraj</i>. Upozorenje se javlja samo zato što aplikacija nije sa Google Play prodavnice.</p>
-  <p><b>🪟 Windows</b> — Studio, Radionica, Format:<br>
-  preuzmi <i>.exe</i> fajl i pokreni ga. Ako se pojavi „Windows je zaštitio računar”, klikni <i>Više informacija</i> → <i>Ipak pokreni</i>.</p>
-  <p><b>🍎 iPhone / iPad</b> — sve osim Sentinela i Format-a:<br>
+  <p><b>🪟 Windows</b> — Studio, Radionica, Format, IP kamere:<br>
+  preuzmi <i>.exe</i> fajl i pokreni ga (IP kamere: preuzmi <i>.zip</i>, raspakuj i pokreni <i>AtmosIPKamere.exe</i>). Ako se pojavi „Windows je zaštitio računar”, klikni <i>Više informacija</i> → <i>Ipak pokreni</i>.</p>
+  <p><b>🍎 iPhone / iPad</b> — sve osim Sentinela, Format-a i IP kamera:<br>
   otvori aplikaciju u Safariju → dugme Deli → <i>Dodaj na početni ekran</i>.</p>
-  <p class="how">Web aplikacije, Studio i Radionica se same ažuriraju. Novu verziju Sentinela i Format-a preuzmi istim dugmetom i instaliraj preko stare.</p>
+  <p class="how">Web aplikacije, Studio i Radionica se same ažuriraju. Novu verziju Sentinela, Format-a i IP kamera preuzmi istim dugmetom i instaliraj preko stare.</p>
 </section>
 
 <footer>
@@ -104,7 +104,11 @@ const APPS=[
   {n:'Atmos Format',t:'Formatiranje diskova',i:'atmos-format',u:'https://github.com/gembirdt-bit/atmos-format/releases/latest/download/AtmosFormat.exe',btn:'🪟 Preuzmi za Windows',
    u2:'https://github.com/gembirdt-bit/atmos-format/releases/latest/download/AtmosFormat.apk',btn2:'📥 Preuzmi za Android',
    d:'Brisanje i formatiranje diskova uz zaštitu sistemskog diska: NTFS, exFAT ili FAT32, MBR ili GPT, brzi ili pun format sa proverom sektora.',
-   f:['Sistemski disk je uvek zaštićen','NTFS / exFAT / FAT32, MBR ili GPT','Pun format proverava sektore']}
+   f:['Sistemski disk je uvek zaštićen','NTFS / exFAT / FAT32, MBR ili GPT','Pun format proverava sektore']},
+  {n:'Atmos IP kamere',t:'Pretraga i pregled IP kamera',i:'atmos-ipkamere',u:'https://github.com/gembirdt-bit/Atmos-ipkamere/releases/latest/download/AtmosIPKamere-Windows.zip',btn:'🪟 Preuzmi za Windows',
+   u2:'https://github.com/gembirdt-bit/Atmos-ipkamere/releases/latest/download/AtmosIPKamere.apk',btn2:'📥 Preuzmi za Android',
+   d:'Pronalazi sve IP kamere na mreži (ONVIF, RTSP, web) i prepoznaje proizvođača. Nove kamere se odmah vide odvojeno od već poznatih.',
+   f:['Nove / poznate kamere, javlja kad se uključi nova','RTSP, MJPEG, JPEG, HLS i RTMP strimovi','Sam pronalazi adrese strimova preko ONVIF-a']}
 ];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 document.getElementById('apps').innerHTML=APPS.map(a=>`<article class="app">
